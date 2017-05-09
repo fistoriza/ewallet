@@ -37,8 +37,9 @@
           </div>
          <%= simple_form_for Wallet.new do |f| %>
             <div class="modal-body">
-              <%= f.input :expense %>
-              <%= f.input :amount %>
+              <%= f.input :expense, placeholder: "Another expense, huh?" %>
+              <br />
+              <%= f.input :amount, placeholder: "A million dollar?" %>
               <br />
             </div>
             <div class="modal-footer">
@@ -46,6 +47,7 @@
               <%= f.submit 'Save', class: 'btn btn-primary' %>
             </div>
           <% end %>
+          &nbsp;&nbsp;
         </div>
       </div>
     </div>
