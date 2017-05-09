@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <header class="row">
+      <div class="col-xs-12 col-md-4 links">
+        <%= link_to 'E-Wallet', root_path %>
+      </div>
+
+      <div class="col-xs-12 col-md-4 links">
+        <%= link_to 'Add New Expense', new_wallet_path %>
+      </div>
+
+      <div class="col-xs-6 col-md-4 links">
+        <%= link_to 'Sign In', '#' %>
+        <%= link_to 'Sign Up', '#' %>
+      </div>
+    </header>
+
+    <br class="clear" />
+
+
     <%= yield %>
   </body>
 </html>
