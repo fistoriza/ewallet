@@ -4,14 +4,10 @@ class WalletsController < ApplicationController
     @wallets = Wallet.all
   end
 
-  def new
-    @wallet = Wallet.new
-  end
-
   def create
     @wallet = Wallet.create(wallet_params)
     if @wallet.invalid?
-      flash[:error] = 'The data you entered is invalid'
+      flash[:error] = 'The data you entered is invalid. Please try again.'
     end
 
     redirect_to root_path

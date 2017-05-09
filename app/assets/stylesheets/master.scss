@@ -14,7 +14,7 @@ h4 {
   font-size: 18px;
 }
 
-.links, a, a:hover {
+.links, a:hover, a:link, a:visited, a:active {
   font-family: 'fira_sansextrabold_italic', sans-serif;
   font-size: 18px;
   color: black;
