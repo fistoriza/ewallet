@@ -2,8 +2,12 @@
 
 <div class="row expense">
   <% @wallets.each do |wallet| %>
-      <div class="col-xs-6 col-md-4 col-offet-1"><%= wallet.expense %></div>
-      <div class="col-xs-6 col-md-8"><%= wallet.amount %></div>
-    <br />
+        <div class="col-md-8 col-md-offset-3"><%= wallet.expense %></div>
+        <div class="col-md-4 col-md-offset-3"><%= number_to_currency(wallet.amount, precision: 0) %></div>
   <% end %>
+</div>
+<br class="clear" />
+<div class="row expense">
+  <div class="col-md-8 col-md-offset-3">Total</div>
+  <div class="col-md-4 col-md-offset-3"><%= number_to_currency(@wallets.map(&:amount).sum, precision: 0) %></div>
 </div>
